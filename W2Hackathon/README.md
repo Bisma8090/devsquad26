@@ -13,9 +13,7 @@ The project is organized with separate JS files for better maintainability.
 
 ## File Structure
 W2Hackathon/
--
 ├── index.html
--
 ├── auth.js-
 ├── landing.js
 ├── main.js
