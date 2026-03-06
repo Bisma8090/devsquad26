@@ -1,3 +1,6 @@
+                    // landingpage
+
+
 function navbar() {
   return `
 <header class="flex flex-col md:flex-row md:justify-between py-3 px-2 md:px-12 border-b border-gray-300 mb-8 gap-4 md:gap-0">
@@ -107,6 +110,9 @@ Challenge yourself with timed quizzes to test your speed and accuracy.
 </section>
 `;
 }
+showLandingPage();
+
+                    //  SignupPage
 
 function showSignupPage() {
   app.innerHTML = `
@@ -167,6 +173,11 @@ function signupUser() {
   alert(` Signup Successful! Welcome ${name}`);
   showSigninPage();
 }
+
+
+                    //  SigninPage
+
+
 function showSigninPage() {
   app.innerHTML = `
 <header class="flex flex-col md:flex-row md:justify-between py-3 px-2 md:px-12 border-b border-gray-300 mb-8 gap-4 md:gap-0">
@@ -238,6 +249,12 @@ function signinUser() {
     alert(" Invalid credentials");
   }
 }
+
+
+                    //  ProfilePage
+
+
+
 function showProfilePage() {
   const history = JSON.parse(localStorage.getItem("quizHistory")) || [];
   let historyHTML = history
@@ -324,6 +341,11 @@ ${historyHTML}
 </section>
 `;
 }
+
+                    //  QuizPage
+
+
+
 function filterQuizzes(searchText) {
   searchText = searchText.toLowerCase().trim();
 
@@ -777,6 +799,11 @@ function startTimer() {
     timeLeft--;
   }, 1000);
 }
+
+                    //  ProgressPage
+
+
+
 function getProgress() {
   return ((currentQuestion + 1) / quizQuestions.length) * 100;
 }
@@ -894,6 +921,11 @@ function prevQuestion() {
   }
 }
 
+
+                    // ResultPage
+
+
+
 function showResult() {
   let score = 0;
 
@@ -954,6 +986,11 @@ function showResult() {
   </section>
   `;
 }
+
+
+                    // ReviewPage
+
+
 function reviewAnswers() {
   let wrongAnswers = quizQuestions
     .map((q, index) => {
@@ -1006,4 +1043,3 @@ Back to Quizzes
 </section>
 `;
 }
-showLandingPage();
