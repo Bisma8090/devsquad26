@@ -178,245 +178,109 @@ ${allQuizHTML}
 </section>
 `;
 }
-
 const quizzes = {
   "General Knowledge": [
-    {
-      question: "What is the capital of France?",
-      options: ["London", "Paris", "Berlin", "Rome"],
-      correct: 1,
-    },
-    {
-      question: "Which continent is the largest?",
-      options: ["Africa", "Asia", "Europe", "Australia"],
-      correct: 1,
-    },
-    {
-      question: "Which animal is known as king of jungle?",
-      options: ["Tiger", "Lion", "Elephant", "Bear"],
-      correct: 1,
-    },
-    {
-      question: "Which country is famous for pizza?",
-      options: ["Italy", "Spain", "France", "Greece"],
-      correct: 0,
-    },
-    {
-      question: "How many continents are there?",
-      options: ["5", "6", "7", "8"],
-      correct: 2,
-    },
+    { question: "What is the capital of France?", options: ["London", "Paris", "Berlin", "Rome"], correct: 1 },
+    { question: "Which continent is the largest?", options: ["Africa", "Asia", "Europe", "Australia"], correct: 1 },
+    { question: "Which animal is known as king of jungle?", options: ["Tiger", "Lion", "Elephant", "Bear"], correct: 1 },
+    { question: "Which country is famous for pizza?", options: ["Italy", "Spain", "France", "Greece"], correct: 0 },
+    { question: "How many continents are there?", options: ["5", "6", "7", "8"], correct: 2 },
+    { question: "Which is the largest ocean in the world?", options: ["Atlantic", "Indian", "Pacific", "Arctic"], correct: 2 },
+    { question: "What is the tallest mountain in the world?", options: ["K2", "Everest", "Kangchenjunga", "Lhotse"], correct: 1 },
+    { question: "Which country is known as Land of Rising Sun?", options: ["China", "Japan", "South Korea", "Thailand"], correct: 1 },
+    { question: "Which language has the most native speakers?", options: ["English", "Spanish", "Mandarin", "Hindi"], correct: 2 },
+    { question: "Which continent is also a country?", options: ["Europe", "Australia", "Asia", "Africa"], correct: 1 },
   ],
 
   Science: [
-    {
-      question: "Which planet is known as Red Planet?",
-      options: ["Earth", "Mars", "Jupiter", "Venus"],
-      correct: 1,
-    },
-    {
-      question: "Water chemical formula?",
-      options: ["H2O", "CO2", "O2", "NaCl"],
-      correct: 0,
-    },
-    {
-      question: "Sun is a?",
-      options: ["Planet", "Star", "Comet", "Asteroid"],
-      correct: 1,
-    },
-    {
-      question: "Which gas do humans breathe?",
-      options: ["Oxygen", "Hydrogen", "Nitrogen", "Helium"],
-      correct: 0,
-    },
-    {
-      question: "Plants make food by?",
-      options: ["Photosynthesis", "Digestion", "Respiration", "Evaporation"],
-      correct: 0,
-    },
+    { question: "Which planet is known as Red Planet?", options: ["Earth", "Mars", "Jupiter", "Venus"], correct: 1 },
+    { question: "Water chemical formula?", options: ["H2O", "CO2", "O2", "NaCl"], correct: 0 },
+    { question: "Sun is a?", options: ["Planet", "Star", "Comet", "Asteroid"], correct: 1 },
+    { question: "Which gas do humans breathe?", options: ["Oxygen", "Hydrogen", "Nitrogen", "Helium"], correct: 0 },
+    { question: "Plants make food by?", options: ["Photosynthesis", "Digestion", "Respiration", "Evaporation"], correct: 0 },
+    { question: "What is the chemical symbol for gold?", options: ["Au", "Ag", "Fe", "G"], correct: 0 },
+    { question: "What is HCl commonly called?", options: ["Hydrochloric acid", "Sulfuric acid", "Nitric acid", "Acetic acid"], correct: 0 },
+    { question: "Which organ pumps blood in humans?", options: ["Lungs", "Heart", "Kidney", "Liver"], correct: 1 },
+    { question: "What is the speed of light?", options: ["3x10^8 m/s", "3x10^6 m/s", "3x10^5 m/s", "3x10^3 m/s"], correct: 0 },
+    { question: "Which particle has a negative charge?", options: ["Proton", "Neutron", "Electron", "Photon"], correct: 2 },
   ],
 
   History: [
-    {
-      question: "Who discovered America?",
-      options: ["Columbus", "Newton", "Einstein", "Tesla"],
-      correct: 0,
-    },
-    {
-      question: "World War 2 ended in?",
-      options: ["1945", "1939", "1918", "1960"],
-      correct: 0,
-    },
-    {
-      question: "Great Wall belongs to?",
-      options: ["India", "China", "Japan", "Korea"],
-      correct: 1,
-    },
-    {
-      question: "First President of USA?",
-      options: ["Lincoln", "Washington", "Adams", "Jefferson"],
-      correct: 1,
-    },
-    {
-      question: "Who founded Mughal Empire?",
-      options: ["Akbar", "Babur", "Aurangzeb", "Shahjahan"],
-      correct: 1,
-    },
+    { question: "Who discovered America?", options: ["Columbus", "Newton", "Einstein", "Tesla"], correct: 0 },
+    { question: "World War 2 ended in?", options: ["1945", "1939", "1918", "1960"], correct: 0 },
+    { question: "Great Wall belongs to?", options: ["India", "China", "Japan", "Korea"], correct: 1 },
+    { question: "First President of USA?", options: ["Lincoln", "Washington", "Adams", "Jefferson"], correct: 1 },
+    { question: "Who founded Mughal Empire?", options: ["Akbar", "Babur", "Aurangzeb", "Shahjahan"], correct: 1 },
+    { question: "When did the French Revolution start?", options: ["1789", "1776", "1804", "1799"], correct: 0 },
+    { question: "Who was the first man on the moon?", options: ["Yuri Gagarin", "Neil Armstrong", "Buzz Aldrin", "Michael Collins"], correct: 1 },
+    { question: "Which empire was ruled by Julius Caesar?", options: ["Greek", "Roman", "Persian", "Egyptian"], correct: 1 },
+    { question: "When did India gain independence?", options: ["1945", "1947", "1950", "1939"], correct: 1 },
+    { question: "Who was known as Iron Man of India?", options: ["Nehru", "Gandhi", "Sardar Patel", "Bhagat Singh"], correct: 2 },
   ],
 
   Literature: [
-    {
-      question: "Who wrote Hamlet?",
-      options: [
-        "Charles Dickens",
-        "William Shakespeare",
-        "Mark Twain",
-        "Jane Austen",
-      ],
-      correct: 1,
-    },
-    {
-      question: "Who wrote Harry Potter?",
-      options: ["J.K. Rowling", "Tolkien", "Lewis", "Dan Brown"],
-      correct: 0,
-    },
-    {
-      question: "Sherlock Holmes creator?",
-      options: ["Arthur Conan Doyle", "Agatha Christie", "Hemingway", "Twain"],
-      correct: 0,
-    },
-    {
-      question: "Romeo and Juliet written by?",
-      options: ["Shakespeare", "Milton", "Homer", "Virgil"],
-      correct: 0,
-    },
-    {
-      question: "The Odyssey written by?",
-      options: ["Homer", "Plato", "Aristotle", "Socrates"],
-      correct: 0,
-    },
+    { question: "Who wrote Hamlet?", options: ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"], correct: 1 },
+    { question: "Who wrote Harry Potter?", options: ["J.K. Rowling", "Tolkien", "Lewis", "Dan Brown"], correct: 0 },
+    { question: "Sherlock Holmes creator?", options: ["Arthur Conan Doyle", "Agatha Christie", "Hemingway", "Twain"], correct: 0 },
+    { question: "Romeo and Juliet written by?", options: ["Shakespeare", "Milton", "Homer", "Virgil"], correct: 0 },
+    { question: "The Odyssey written by?", options: ["Homer", "Plato", "Aristotle", "Socrates"], correct: 0 },
+    { question: "Which novel features Atticus Finch?", options: ["1984", "To Kill a Mockingbird", "Hamlet", "Moby Dick"], correct: 1 },
+    { question: "Who wrote 'Pride and Prejudice'?", options: ["Jane Austen", "Charlotte Bronte", "Emily Dickinson", "Mark Twain"], correct: 0 },
+    { question: "Author of 'The Great Gatsby'?", options: ["F. Scott Fitzgerald", "Orwell", "Hemingway", "Tolstoy"], correct: 0 },
+    { question: "Who wrote 'Macbeth'?", options: ["Shakespeare", "Milton", "Homer", "Virgil"], correct: 0 },
+    { question: "Who wrote 'War and Peace'?", options: ["Tolstoy", "Hemingway", "Shakespeare", "Dickens"], correct: 0 },
   ],
 
   Mathematics: [
-    {
-      question: "5 + 7 = ?",
-      options: ["10", "11", "12", "13"],
-      correct: 2,
-    },
-    {
-      question: "Square root of 64?",
-      options: ["6", "7", "8", "9"],
-      correct: 2,
-    },
-    {
-      question: "10 × 5 = ?",
-      options: ["40", "45", "50", "60"],
-      correct: 2,
-    },
-    {
-      question: "100 ÷ 10 = ?",
-      options: ["5", "10", "15", "20"],
-      correct: 1,
-    },
-    {
-      question: "15 + 5 = ?",
-      options: ["18", "19", "20", "21"],
-      correct: 2,
-    },
+    { question: "5 + 7 = ?", options: ["10", "11", "12", "13"], correct: 2 },
+    { question: "Square root of 64?", options: ["6", "7", "8", "9"], correct: 2 },
+    { question: "10 × 5 = ?", options: ["40", "45", "50", "60"], correct: 2 },
+    { question: "100 ÷ 10 = ?", options: ["5", "10", "15", "20"], correct: 1 },
+    { question: "15 + 5 = ?", options: ["18", "19", "20", "21"], correct: 2 },
+    { question: "7 × 8 = ?", options: ["54", "56", "58", "60"], correct: 1 },
+    { question: "9² = ?", options: ["81", "72", "79", "91"], correct: 0 },
+    { question: "25 ÷ 5 = ?", options: ["4", "5", "6", "7"], correct: 1 },
+    { question: "50 - 17 = ?", options: ["32", "33", "34", "35"], correct: 2 },
+    { question: "12 × 12 = ?", options: ["142", "144", "146", "148"], correct: 1 },
   ],
 
   "The Universe": [
-    {
-      question: "Which planet is the largest in our solar system?",
-      options: ["Earth", "Jupiter", "Mars", "Venus"],
-      correct: 1,
-    },
-    {
-      question: "What galaxy do we live in?",
-      options: ["Andromeda", "Milky Way", "Whirlpool", "Sombrero"],
-      correct: 1,
-    },
-    {
-      question: "Which planet is closest to the Sun?",
-      options: ["Mercury", "Venus", "Earth", "Mars"],
-      correct: 0,
-    },
-    {
-      question: "What is the Sun?",
-      options: ["Planet", "Star", "Asteroid", "Comet"],
-      correct: 1,
-    },
-    {
-      question: "Which planet has rings?",
-      options: ["Mars", "Venus", "Saturn", "Mercury"],
-      correct: 2,
-    },
+    { question: "Which planet is the largest in our solar system?", options: ["Earth", "Jupiter", "Mars", "Venus"], correct: 1 },
+    { question: "What galaxy do we live in?", options: ["Andromeda", "Milky Way", "Whirlpool", "Sombrero"], correct: 1 },
+    { question: "Which planet is closest to the Sun?", options: ["Mercury", "Venus", "Earth", "Mars"], correct: 0 },
+    { question: "What is the Sun?", options: ["Planet", "Star", "Asteroid", "Comet"], correct: 1 },
+    { question: "Which planet has rings?", options: ["Mars", "Venus", "Saturn", "Mercury"], correct: 2 },
+    { question: "How many planets are in our solar system?", options: ["7", "8", "9", "10"], correct: 1 },
+    { question: "Which is the smallest planet?", options: ["Mars", "Mercury", "Venus", "Earth"], correct: 1 },
+    { question: "Which planet is known as Earth’s twin?", options: ["Venus", "Mars", "Mercury", "Jupiter"], correct: 0 },
+    { question: "Which celestial body orbits a planet?", options: ["Moon", "Sun", "Star", "Comet"], correct: 0 },
+    { question: "Which is a dwarf planet?", options: ["Pluto", "Mars", "Neptune", "Earth"], correct: 0 },
   ],
 
   "Ancient Civilizations": [
-    {
-      question: "Which civilization built the pyramids?",
-      options: ["Greek", "Egyptian", "Roman", "Persian"],
-      correct: 1,
-    },
-    {
-      question: "The Indus Valley civilization was located in?",
-      options: ["China", "India & Pakistan", "Egypt", "Greece"],
-      correct: 1,
-    },
-    {
-      question: "Who ruled the Macedonian Empire?",
-      options: [
-        "Alexander the Great",
-        "Julius Caesar",
-        "Napoleon",
-        "Genghis Khan",
-      ],
-      correct: 0,
-    },
-    {
-      question: "Which civilization built Machu Picchu?",
-      options: ["Aztec", "Inca", "Maya", "Roman"],
-      correct: 1,
-    },
-    {
-      question: "The Roman Empire started in which country?",
-      options: ["France", "Italy", "Spain", "Greece"],
-      correct: 1,
-    },
+    { question: "Which civilization built the pyramids?", options: ["Greek", "Egyptian", "Roman", "Persian"], correct: 1 },
+    { question: "The Indus Valley civilization was located in?", options: ["China", "India & Pakistan", "Egypt", "Greece"], correct: 1 },
+    { question: "Who ruled the Macedonian Empire?", options: ["Alexander the Great", "Julius Caesar", "Napoleon", "Genghis Khan"], correct: 0 },
+    { question: "Which civilization built Machu Picchu?", options: ["Aztec", "Inca", "Maya", "Roman"], correct: 1 },
+    { question: "The Roman Empire started in which country?", options: ["France", "Italy", "Spain", "Greece"], correct: 1 },
+    { question: "Who was the first emperor of China?", options: ["Qin Shi Huang", "Han Wudi", "Sun Tzu", "Mao Zedong"], correct: 0 },
+    { question: "The Mesopotamian civilization was located in?", options: ["Egypt", "Iraq", "India", "China"], correct: 1 },
+    { question: "Who built the Parthenon?", options: ["Romans", "Greeks", "Egyptians", "Persians"], correct: 1 },
+    { question: "Which civilization invented the wheel?", options: ["Egyptians", "Sumerians", "Romans", "Chinese"], correct: 1 },
+    { question: "Which river was central to Egyptian civilization?", options: ["Nile", "Amazon", "Tigris", "Yangtze"], correct: 0 },
   ],
 
   "Shakespearean Plays": [
-    {
-      question: "Who wrote Romeo and Juliet?",
-      options: [
-        "William Shakespeare",
-        "Charles Dickens",
-        "Mark Twain",
-        "Jane Austen",
-      ],
-      correct: 0,
-    },
-    {
-      question: "Who is the prince of Denmark in Hamlet?",
-      options: ["Macbeth", "Hamlet", "Othello", "Romeo"],
-      correct: 1,
-    },
-    {
-      question: "Which play features the character Macbeth?",
-      options: ["Hamlet", "Macbeth", "Othello", "King Lear"],
-      correct: 1,
-    },
-    {
-      question: "Who is Juliet's lover?",
-      options: ["Hamlet", "Romeo", "Macbeth", "Othello"],
-      correct: 1,
-    },
-    {
-      question: "Who wrote the play Othello?",
-      options: ["Shakespeare", "Dickens", "Homer", "Virgil"],
-      correct: 0,
-    },
+    { question: "Who wrote Romeo and Juliet?", options: ["William Shakespeare", "Charles Dickens", "Mark Twain", "Jane Austen"], correct: 0 },
+    { question: "Who is the prince of Denmark in Hamlet?", options: ["Macbeth", "Hamlet", "Othello", "Romeo"], correct: 1 },
+    { question: "Which play features the character Macbeth?", options: ["Hamlet", "Macbeth", "Othello", "King Lear"], correct: 1 },
+    { question: "Who is Juliet's lover?", options: ["Hamlet", "Romeo", "Macbeth", "Othello"], correct: 1 },
+    { question: "Who wrote the play Othello?", options: ["Shakespeare", "Dickens", "Homer", "Virgil"], correct: 0 },
+    { question: "Which play features Iago?", options: ["Othello", "Macbeth", "Hamlet", "King Lear"], correct: 0 },
+    { question: "In which play does Lady Macbeth appear?", options: ["Othello", "Macbeth", "Hamlet", "King Lear"], correct: 1 },
+    { question: "Who is Ophelia?", options: ["Hamlet’s sister", "Hamlet’s lover", "Juliet’s friend", "Macbeth’s wife"], correct: 1 },
+    { question: "Which play has the character Prospero?", options: ["The Tempest", "Othello", "Hamlet", "Macbeth"], correct: 0 },
+    { question: "Which play features King Lear?", options: ["Hamlet", "King Lear", "Macbeth", "Othello"], correct: 1 },
   ],
 };
 let timer;
