@@ -60,13 +60,13 @@ task-manager-api
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/task-manager-api.git
+   git clone https://github.com/Bisma8090/devsquad26/tree/main/Week3Day1.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd task-manager-api
+   cd Week3Day1
    ```
 
 3. Install the required dependencies:
