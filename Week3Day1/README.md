@@ -53,30 +53,41 @@ task-manager-api
 
 
 ---
-
 ## Installation & Setup
 
-### 1️⃣ Clone the repository
-git clone https://github.com/yourusername/task-manager-api.git
+1. Clone the repository:
 
-### 2️⃣ Navigate to the project folder
-cd task-manager-api
+   ```bash
+   git clone https://github.com/yourusername/task-manager-api.git
+   ```
 
-### 3️⃣ Install dependencies
-npm install
+2. Navigate to the project directory:
 
-### 4️⃣ Run the server
-npm start
+   ```bash
+   cd task-manager-api
+   ```
 
+3. Install the required dependencies:
 
-or with nodemon:
-npm run dev
+   ```bash
+   npm install
+   ```
 
-Server will start at:
-http://localhost:5000/api
+4. Start the application:
 
+   ```bash
+   npm start 
+   ```
+   or
+    ```bash
+   npm run dev 
+   ```
 
----
+4. Server will start at:
+
+    ```bash
+   http://localhost:5000/api 
+   ```
 
 ## API Endpoints
 
