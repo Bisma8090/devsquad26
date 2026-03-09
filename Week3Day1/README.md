@@ -97,30 +97,32 @@ task-manager-api
    ```
 ## Sample Request
 
-   ```bash
-   POST /api/tasks
-   ```
-**Request Body
-**
+POST /api/tasks
+
+### Request Body
+
+```json
 {
-"title": "Learn Express",
-"completed": false,
-"description": "Build a small Express project"
+  "title": "Learn Express",
+  "completed": false,
+  "description": "Build a small Express project"
 }
+```
 
-## Sample Request
+## Sample Response
 
+```json
 {
-"success": true,
-"data": {
-"id": "uuid-example",
-"title": "Learn Express",
-"completed": false,
-"description": "Build a small Express project"
-},
-"message": "Task created successfully"
+  "success": true,
+  "data": {
+    "id": "uuid-example",
+    "title": "Learn Express",
+    "completed": false,
+    "description": "Build a small Express project"
+  },
+  "message": "Task created successfully"
 }
-
+```
 ## Testing with Postman
 
 All endpoints were tested using **Postman**.  
