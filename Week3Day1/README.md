@@ -1,7 +1,9 @@
 # Task Manager API
+Task Manager API is a simple RESTful API built using Node.js and Express.js.
+It allows users to perform CRUD operations on tasks such as creating, reading, updating, and deleting tasks.
 
-A simple RESTful API built with **Node.js** and **Express.js** that allows users to manage tasks.  
-This project demonstrates backend fundamentals such as CRUD operations, API routing, request validation, error handling, and API documentation using Swagger.
+The API stores data in memory (no database) and returns responses in a consistent JSON format.
+Additional features include searching tasks by title and viewing task statistics.
 
 ---
 
@@ -88,93 +90,38 @@ task-manager-api
     ```bash
    http://localhost:5000/api 
    ```
+4. Swagger Documentation:
 
-## API Endpoints
+    ```bash
+   http://localhost:5000/api-docs
+   ```
+## Sample Request
 
-### Get All Tasks
-GET /api/tasks
-
-
-### Get Task by ID
-
-
-GET /api/tasks/:id
-
-
-### Create Task
-
-
-POST /api/tasks
-
-
-Example Request Body:
-
+    ```bash
+   POST /api/tasks
+   ```
+Request Body
 
 {
 "title": "Learn Express",
 "completed": false,
-"description": "Build a simple Express project"
+"description": "Build a small Express project"
 }
 
-
----
-
-### Update Task
-
-
-PUT /api/tasks/:id
-
-
----
-
-### Delete Task
-
-
-DELETE /api/tasks/:id
-
-
----
-
-### Search Tasks
-
-
-GET /api/tasks?title=learn
-
-
----
-
-### Task Statistics
-
-
-GET /api/tasks/stats
-
-
-Response Example:
-
+**## Sample Request
+**
 
 {
 "success": true,
 "data": {
-"totalTasks": 10,
-"completedTasks": 4,
-"pendingTasks": 6
+"id": "uuid-example",
+"title": "Learn Express",
+"completed": false,
+"description": "Build a small Express project"
 },
-"message": "Tasks statistics"
+"message": "Task created successfully"
 }
 
-
----
-
-## Response Format
-
-All API responses follow this structure:
-
-
-{
-"success": true,
-"data": {},
-"message": "Operation successful"
-}
 ## Testing with Postman
 
 All endpoints were tested using **Postman**.  
