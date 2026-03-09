@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Navbar</title>
+  </head>
+
+  <body class="bg-gray-100 font-[Poppins]">
+    <header class="bg-[#313131] text-gray-300">
+      <div
+        class="max-w-[1400px] mx-auto flex items-center justify-between px-6 py-3 h-[42px]"
+      >
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-2">
+            <div>
+              <img
+                class="w-10 px-2 py-1"
+                src="a95851f24983fa54346bbe346186cc6aed3039a5.png"
+                alt="Logo"
+              />
+            </div>
+          </div>
+
+          <nav class="hidden md:flex gap-6 text-sm">
+            <a href="#" class="text-[#AAAAAA] border-b-2 border-blue-500 pb-1"
+              >STORE</a
+            >
+
+            <a href="#" class="text-[#AAAAAA]">FAQ</a>
+
+            <a href="#" class="text-[#AAAAAA]">HELP</a>
+
+            <a href="#" class="text-[#AAAAAA]">UNREAL ENGINE</a>
+          </nav>
+        </div>
+
+        <div class="hidden md:flex items-center gap-6">
+          <img class="w-6 px-1 py-1" src="Vector (3).png" alt="icon1" />
+
+          <button class="hover:text-white"></button>
+
+          <a href="#" class="flex items-center text-[#AAAAAA]">
+            <img class="w-6 py-1" src="Frame.png" alt="icon2" />
+
+            <span>SIGN IN</span>
+          </a>
+
+          <button
+            class="bg-blue-600 px-4 py-2 text-white text-sm hover:bg-blue-700"
+          >
+            DOWNLOAD
+          </button>
+        </div>
+
+        <button id="menuBtn" class="md:hidden text-white text-xl">
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden px-6 pb-4">
+        <nav class="flex flex-col gap-4 text-sm">
+          <a href="#" class="hover:text-white">STORE</a>
+          <a href="#" class="hover:text-white">FAQ</a>
+          <a href="#" class="hover:text-white">HELP</a>
+          <a href="#" class="hover:text-white">UNREAL ENGINE</a>
+          <a href="#" class="hover:text-white">SIGN IN</a>
+
+          <button class="bg-blue-600 w-fit px-4 py-2 text-white text-sm">
+            DOWNLOAD
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
