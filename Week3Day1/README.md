@@ -15,7 +15,6 @@ This project demonstrates backend fundamentals such as CRUD operations, API rout
 - Search tasks by title
 - Task statistics endpoint
 - Swagger API documentation
-- Global error handling middleware
 - In-memory data storage (no database)
 
 ---
