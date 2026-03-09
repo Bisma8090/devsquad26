@@ -97,19 +97,18 @@ task-manager-api
    ```
 ## Sample Request
 
-    ```bash
+   ```bash
    POST /api/tasks
    ```
-Request Body
-
+**Request Body
+**
 {
 "title": "Learn Express",
 "completed": false,
 "description": "Build a small Express project"
 }
 
-**## Sample Request
-**
+## Sample Request
 
 {
 "success": true,
