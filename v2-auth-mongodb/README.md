@@ -83,11 +83,10 @@ task-manager-api
 
 4. Create a .env file in the root directory and add:
 
-   ```bash
 PORT=5000
 MONGO_URI=mongodb+srv://bisma:B8jp4Ey44g9xJm2Z@cluster0.rmftyvb.mongodb.net/?appName=Cluster0
 JWT_SECRET=mysecretkey
-```
+
 5. Start the application:
 
    ```bash
