@@ -66,7 +66,7 @@ task-manager-api
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Bisma8090/devsquad26/tree/main/Week3Day1.git
+   git clone https://github.com/Bisma8090/devsquad26/tree/main/v2-auth-mongodb.git
    ```
 
 2. Navigate to the project directory:
@@ -84,8 +84,10 @@ task-manager-api
 4. Create a .env file in the root directory and add:
 
    ```bash
-   npm start 
-   ```
+PORT=5000
+MONGO_URI=mongodb+srv://bisma:B8jp4Ey44g9xJm2Z@cluster0.rmftyvb.mongodb.net/?appName=Cluster0
+JWT_SECRET=mysecretkey
+```
 5. Start the application:
 
    ```bash
@@ -139,7 +141,7 @@ POST /api/tasks
 
 All endpoints were tested using **Postman**.  
 A Postman collection can be exported and shared for easier API testing.
-[Download Postman Collection](./TaskManager-API.postman_collection.json)
+[Download Postman Collection](./TaskManagerAPI.postman_collection.json)
 
 ## Deployment
 
