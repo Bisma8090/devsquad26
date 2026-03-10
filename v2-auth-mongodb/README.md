@@ -148,5 +148,5 @@ A Postman collection can be exported and shared for easier API testing.
 1. Live deployment:
 
    ```bash
-   https://devsquad26-15g2.vercel.app/t
+   https://devsquad26-15g2.vercel.app
    ```
