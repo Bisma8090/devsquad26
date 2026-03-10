@@ -1,23 +1,19 @@
 # Task Manager API
-Task Manager API is a simple RESTful API built using Node.js and Express.js.
-It allows users to perform CRUD operations on tasks such as creating, reading, updating, and deleting tasks.
+Task Manager API (v2) is a robust RESTful API built using Node.js and Express.js, with **MongoDB** for persistent storage, **JWT-based authentication**, and **request validation**.  
 
-The API stores data in memory (no database) and returns responses in a consistent JSON format.
-Additional features include searching tasks by title and viewing task statistics.
-
+It allows users to securely perform CRUD operations on their tasks and includes **Swagger documentation** for all endpoints.
 ---
 
 ## Features
 
-- Create a new task
-- Get all tasks
-- Get a task by ID
-- Update a task
-- Delete a task
+- User Registration and Login with JWT authentication
+- Secure routes (users can only access their own tasks)
+- Create, Read, Update, Delete tasks
+- Input validation using `express-validator`
 - Search tasks by title
 - Task statistics endpoint
 - Swagger API documentation
-- In-memory data storage (no database)
+- Persistent storage using MongoDB
 
 ---
 
@@ -25,10 +21,12 @@ Additional features include searching tasks by title and viewing task statistics
 
 - Node.js
 - Express.js
-- UUID
-- Swagger UI
-- Swagger JSDoc
-- Nodemon
+- MongoDB + Mongoose
+- JWT (jsonwebtoken)
+- bcryptjs
+- express-validator
+- Swagger UI & swagger-jsdoc
+- dotenv
 - Postman
 
 ---
@@ -38,21 +36,29 @@ Additional features include searching tasks by title and viewing task statistics
 task-manager-api
 │
 ├── controllers
+│ ├── authController.js
 │ └── taskController.js
 │
-├── data
-│ └── TasksData.js
-│
-├── middlewares
-│ └── middleware.js
+├── models
+│ ├── User.js
+│ └── Task.js
 │
 ├── routes
+│ ├── authRoutes.js
 │ └── taskRoutes.js
 │
-├── swagger.js
+├── middleware
+│ ├── auth.js
+│ └── validateRequest.js
+│
+├── config
+│ └── db.js
+│
+├── docs
+│ └── swagger.js
+│
 ├── server.js
 └── README.md
-
 
 ---
 ## Installation & Setup
@@ -66,7 +72,7 @@ task-manager-api
 2. Navigate to the project directory:
 
    ```bash
-   cd Week3Day1
+   cd v2-auth-mongodb
    ```
 
 3. Install the required dependencies:
@@ -75,7 +81,12 @@ task-manager-api
    npm install
    ```
 
-4. Start the application:
+4. Create a .env file in the root directory and add:
+
+   ```bash
+   npm start 
+   ```
+5. Start the application:
 
    ```bash
    npm start 
@@ -88,7 +99,7 @@ task-manager-api
 4. Server will start at:
 
     ```bash
-   http://localhost:5000/api 
+   http://localhost:5000
    ```
 4. Swagger Documentation:
 
@@ -117,8 +128,9 @@ POST /api/tasks
   "data": {
     "id": "uuid-example",
     "title": "Learn Express",
+    "description": "Build a small Express project",
     "completed": false,
-    "description": "Build a small Express project"
+    "user": "user_id_here"
   },
   "message": "Task created successfully"
 }
@@ -128,3 +140,11 @@ POST /api/tasks
 All endpoints were tested using **Postman**.  
 A Postman collection can be exported and shared for easier API testing.
 [Download Postman Collection](./TaskManager-API.postman_collection.json)
+
+## Deployment
+
+1. Live deployment:
+
+   ```bash
+   https://devsquad26-15g2.vercel.app/t
+   ```
