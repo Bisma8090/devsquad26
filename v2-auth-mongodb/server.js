@@ -22,9 +22,19 @@ app.use("/api", authRoutes)
 app.use("/api", taskRoutes)
 
 // Swagger docs
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec))
+app.use("/api-docs", swaggerUI.serve);
 
+app.get(
+  "/api-docs",
+  swaggerUI.setup(swaggerSpec, {
+    explorer: true
+  })
+);
 // Error handling
 app.use(errorHandler)
 
-module.exports = app
+const PORT = process.env.PORT || 5000
+
+app.listen(PORT, () => {
+ console.log(`Server running on port ${PORT}`)
+})
