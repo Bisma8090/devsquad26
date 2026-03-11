@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "3478fc36-650b-4eac-8c13-87234d5f373a",
-    "name": "TaskManagerAPI",
+    "name": "DeployedTaskManagerAPI",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "53027006",
     "_collection_link": "https://go.postman.co/collection/53027006-3478fc36-650b-4eac-8c13-87234d5f373a?source=collection_link"
@@ -14,7 +14,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"name\": \"Bisma\",\r\n  \"email\": \"bisma@email.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "raw": "{\r\n  \"name\": \"Bismah\",\r\n  \"email\": \"bismah@email.com\",\r\n  \"password\": \"122456\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -22,12 +22,13 @@
           }
         },
         "url": {
-          "raw": "http://localhost:5000/api/users/register",
-          "protocol": "http",
+          "raw": "https://devsquad26-15g2.vercel.app/api/users/register",
+          "protocol": "https",
           "host": [
-            "localhost"
+            "devsquad26-15g2",
+            "vercel",
+            "app"
           ],
-          "port": "5000",
           "path": [
             "api",
             "users",
@@ -44,7 +45,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"email\": \"bisma@email.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "raw": "{\r\n     \"email\": \"bismah@email.com\",\r\n  \"password\": \"122456\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -52,12 +53,13 @@
           }
         },
         "url": {
-          "raw": "http://localhost:5000/api/users/login",
-          "protocol": "http",
+          "raw": "https://devsquad26-15g2.vercel.app/api/users/login",
+          "protocol": "https",
           "host": [
-            "localhost"
+            "devsquad26-15g2",
+            "vercel",
+            "app"
           ],
-          "port": "5000",
           "path": [
             "api",
             "users",
@@ -84,7 +86,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n\"title\": \"Complete backend assignment\",\r\n\"description\": \"Finish task manager API\"\r\n}",
+          "raw": "{\r\n\"title\": \"Complete backend Api assignment\",\r\n\"description\": \"Finish task manager API\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -92,12 +94,13 @@
           }
         },
         "url": {
-          "raw": "http://localhost:5000/api/tasks",
-          "protocol": "http",
+          "raw": "https://devsquad26-15g2.vercel.app/api/tasks",
+          "protocol": "https",
           "host": [
-            "localhost"
+            "devsquad26-15g2",
+            "vercel",
+            "app"
           ],
-          "port": "5000",
           "path": [
             "api",
             "tasks"
@@ -123,7 +126,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n\"title\": \"Complete Frontend assignment\",\r\n\"description\": \"Finish responsive layout\"\r\n}",
+          "raw": "{\r\n\"title\": \"Complete your Frontend assignment\",\r\n\"description\": \"Finish responsive layout\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -131,12 +134,13 @@
           }
         },
         "url": {
-          "raw": "http://localhost:5000/api/tasks",
-          "protocol": "http",
+          "raw": "https://devsquad26-15g2.vercel.app/api/tasks",
+          "protocol": "https",
           "host": [
-            "localhost"
+            "devsquad26-15g2",
+            "vercel",
+            "app"
           ],
-          "port": "5000",
           "path": [
             "api",
             "tasks"
@@ -168,12 +172,13 @@
           "raw": ""
         },
         "url": {
-          "raw": "http://localhost:5000/api/tasks",
-          "protocol": "http",
+          "raw": "https://devsquad26-15g2.vercel.app/api/tasks",
+          "protocol": "https",
           "host": [
-            "localhost"
+            "devsquad26-15g2",
+            "vercel",
+            "app"
           ],
-          "port": "5000",
           "path": [
             "api",
             "tasks"
@@ -205,16 +210,17 @@
           "raw": ""
         },
         "url": {
-          "raw": "http://localhost:5000/api/tasks/69afe3ff77ec6f0f88922744",
-          "protocol": "http",
+          "raw": "https://devsquad26-15g2.vercel.app/api/tasks/69b0e92718f8e12312588639",
+          "protocol": "https",
           "host": [
-            "localhost"
+            "devsquad26-15g2",
+            "vercel",
+            "app"
           ],
-          "port": "5000",
           "path": [
             "api",
             "tasks",
-            "69afe3ff77ec6f0f88922744"
+            "69b0e92718f8e12312588639"
           ]
         }
       },
@@ -245,16 +251,17 @@
           }
         },
         "url": {
-          "raw": "http://localhost:5000/api/tasks/69afe3ff77ec6f0f88922744",
-          "protocol": "http",
+          "raw": "https://devsquad26-15g2.vercel.app/api/tasks/69b0e92718f8e12312588639",
+          "protocol": "https",
           "host": [
-            "localhost"
+            "devsquad26-15g2",
+            "vercel",
+            "app"
           ],
-          "port": "5000",
           "path": [
             "api",
             "tasks",
-            "69afe3ff77ec6f0f88922744"
+            "69b0e92718f8e12312588639"
           ]
         }
       },
@@ -280,16 +287,17 @@
           "raw": ""
         },
         "url": {
-          "raw": "http://localhost:5000/api/tasks/69afe37d77ec6f0f88922742",
-          "protocol": "http",
+          "raw": "https://devsquad26-15g2.vercel.app/api/tasks/69b0e95c18f8e1231258863b",
+          "protocol": "https",
           "host": [
-            "localhost"
+            "devsquad26-15g2",
+            "vercel",
+            "app"
           ],
-          "port": "5000",
           "path": [
             "api",
             "tasks",
-            "69afe37d77ec6f0f88922742"
+            "69b0e95c18f8e1231258863b"
           ]
         }
       },
@@ -312,7 +320,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n\"name\": \"\",\r\n\"email\": \"wrong\",\r\n\"password\": \"12\"\r\n}",
+          "raw": "{\r\n  \"name\": \"\",\r\n  \"email\": \"bismah@email.com\",\r\n  \"password\": \"122456\"\r\n}\r\n",
           "options": {
             "raw": {
               "language": "json"
@@ -320,12 +328,13 @@
           }
         },
         "url": {
-          "raw": "http://localhost:5000/api/users/register",
-          "protocol": "http",
+          "raw": "https://devsquad26-15g2.vercel.app/api/users/register",
+          "protocol": "https",
           "host": [
-            "localhost"
+            "devsquad26-15g2",
+            "vercel",
+            "app"
           ],
-          "port": "5000",
           "path": [
             "api",
             "users",
