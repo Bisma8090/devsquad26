@@ -23,7 +23,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",              // local dev
-      "https://devsquad26-5va7.vercel.app" // deployed frontend
+      "https://week03day03.netlify.app" // deployed frontend
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true
