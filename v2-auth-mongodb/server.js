@@ -21,7 +21,7 @@ app.use(express.json());
 // For dev: allow React frontend localhost
 app.use(
   cors({
-    origin: "http://localhost:5173", // Change this to frontend URL if deployed
+    origin: "https://devsquad26-5va7.vercel.app", 
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
