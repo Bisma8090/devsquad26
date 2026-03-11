@@ -1,18 +1,16 @@
-// TaskList.jsx
 import { useEffect, useState } from "react";
 import api from "../services/api";
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
+  const token = localStorage.getItem("jwtToken");
 
   const fetchTasks = async () => {
-const token = localStorage.getItem("jwtToken");
+    const res = await api.get("/tasks", {
+      headers: { Authorization: `Bearer ${token}` },
+    });
 
-const res = await api.get("/tasks", {
-  headers: {
-    Authorization: `Bearer ${token}`
-  }
-});    setTasks(res.data);
+    setTasks(res.data.data || []);
   };
 
   useEffect(() => {
@@ -20,38 +18,57 @@ const res = await api.get("/tasks", {
   }, []);
 
   const deleteTask = async (id) => {
-const token = localStorage.getItem("jwtToken");
+    await api.delete(`/tasks/${id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
 
-await api.delete(`/tasks/${id}`, {
-  headers: {
-    Authorization: `Bearer ${token}`
-  }
-});    fetchTasks();
+    fetchTasks();
+  };
+
+  const updateTask = async (id, title) => {
+    const newTitle = prompt("Update task", title);
+
+    if (!newTitle) return;
+
+    await api.put(
+      `/tasks/${id}`,
+      { title: newTitle },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+
+    fetchTasks();
   };
 
   return (
-    <div className="w-[380px] p-6 rounded-2xl backdrop-blur-md bg-white/10 border border-white/40 text-white mx-auto mt-6">
-      <h2 className="text-2xl font-bold mb-4 text-center">Your Tasks</h2>
-
-      <div className="space-y-3">
-        {tasks.map((task) => (
+    <div className="space-y-3 text-white mt-6">
+      {tasks.length > 0 ? (
+        tasks.map((task) => (
           <div
             key={task._id}
-            className="flex justify-between items-center bg-white/10 p-3 rounded-md"
+            className="flex justify-between items-center px-4 py-3 rounded-xl bg-white/10 border border-white/20"
           >
             <p>{task.title}</p>
-            <button
-              onClick={() => deleteTask(task._id)}
-              className="text-red-500 font-semibold hover:underline"
-            >
-              Delete
-            </button>
+
+            <div className="flex gap-2">
+              <button
+                onClick={() => updateTask(task._id, task.title)}
+  className="px-3 py-1 rounded-lg bg-fuchsia-800  hover:bg-fuchsia-900 transition text-white text-sm"
+              >
+                Update
+              </button>
+
+              <button
+                onClick={() => deleteTask(task._id)}
+  className="px-3 py-1 rounded-lg bg-fuchsia-800  hover:bg-fuchsia-900 transition text-white text-sm"
+              >
+                Delete
+              </button>
+            </div>
           </div>
-        ))}
-        {tasks.length === 0 && (
-          <p className="text-center text-white/60">No tasks yet!</p>
-        )}
-      </div>
+        ))
+      ) : (
+        <p className="text-center text-white/60">No tasks yet</p>
+      )}
     </div>
   );
 }

@@ -42,7 +42,7 @@ function LoginForm() {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full bg-transparent border-b border-white outline-none py-2 placeholder-white"
+            className="w-full bg-transparent border-b border-white px-2 outline-none py-2 placeholder-white"
             required
           />
 
@@ -51,26 +51,18 @@ function LoginForm() {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full bg-transparent border-b border-white outline-none py-2 placeholder-white"
+            className="w-full bg-transparent border-b border-white px-2 outline-none py-2  placeholder-white"
             required
           />
 
-          <div className="flex justify-between text-sm">
-            <label className="flex items-center gap-1">
-              <input type="checkbox" /> Remember Me
-            </label>
-            <span className="cursor-pointer">Forgot Password</span>
-          </div>
+          
 
-          <button className="w-full bg-white text-black py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+          <button className="w-full bg-white text-black py-3  rounded-full font-semibold hover:text-white  hover:bg-fuchsia-900 transition">
             Log in
           </button>
         </form>
 
-        <p className="text-center text-sm mt-4">
-          Don't have an account{" "}
-          <span className="font-semibold cursor-pointer">Register</span>
-        </p>
+        
       </div>
     </div>
   );
