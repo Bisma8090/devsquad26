@@ -15,25 +15,33 @@ const app = express();
 // Connect to MongoDB
 connectDB();
 
-// Middleware
 app.use(express.json());
 
-// 🔹 Enable CORS for local + deployed frontend
+// 🔹 CORS middleware
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",              // local dev
-      "https://week03day03.netlify.app" // deployed frontend
+      "http://localhost:5173",
+      "https://taskmnager-frontend.netlify.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true
   })
 );
 
+// 🔹 Handle preflight OPTIONS requests
+app.options("*", cors({
+  origin: [
+    "http://localhost:5173",
+    "https://taskmnager-frontend.netlify.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true
+}));
+
 // Routes
 app.use("/api", authRoutes);
 app.use("/api", taskRoutes);
-
 // Swagger docs
 app.use("/api-docs", express.static(swaggerUiDist));
 app.get("/api-docs", (req, res) => {
