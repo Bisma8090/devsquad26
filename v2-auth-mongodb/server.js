@@ -21,9 +21,9 @@ app.use(express.json());
 // For dev: allow React frontend localhost
 app.use(
   cors({
-    origin: "https://devsquad26-5va7.vercel.app", 
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    origin: ["http://localhost:5173", "https://devsquad26-5va7.vercel.app"], // local dev + deployed frontend
+    methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+    credentials: true
   })
 );
 
