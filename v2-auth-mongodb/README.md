@@ -140,7 +140,7 @@ POST /api/tasks
 
 All endpoints were tested using **Postman**.  
 A Postman collection can be exported and shared for easier API testing.
-[Download Postman Collection](./TaskManagerAPI.postman_collection.json)
+[Download Postman Collection](./DeployedTaskManagerAPI.postman_collection.json)
 
 ## Deployment
 
