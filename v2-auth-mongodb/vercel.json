@@ -4,15 +4,8 @@
     {
       "src": "server.js",
       "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["node_modules/swagger-ui-dist/**"]
-      }
+      "config": { "includeFiles": ["node_modules/swagger-ui-dist/**"] }
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "server.js"
-    }
-  ]
+  "routes": [{ "src": "/(.*)", "dest": "server.js" }]
 }

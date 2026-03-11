@@ -18,10 +18,14 @@ app.use(express.json());
 app.use("/api", authRoutes);
 app.use("/api", taskRoutes);
 
-// Swagger docs
-app.use("/api-docs", express.static(swaggerUiDist));
+app.use("/api-docs", express.static(require("swagger-ui-dist").getAbsoluteFSPath()));
 app.get("/api-docs", (req, res) => {
   res.send(swaggerUI.generateHTML(swaggerSpec, { explorer: true }));
+});
+
+
+app.get("/", (req, res) => {
+  res.send("The API is running successfully. Explore APIs at /api and Swagger documentation at /api-docs.");
 });
 
 // Error handler
