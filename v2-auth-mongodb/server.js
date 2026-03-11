@@ -14,23 +14,19 @@ connectDB();
 
 app.use(express.json());
 
-// Auth routes
 app.use("/api", authRoutes);
 
-// Task routes
 app.use("/api", taskRoutes);
 
-// ✅ Swagger docs
+// Swagger docs
 
 // Serve static Swagger assets (JS/CSS)
 app.use("/api-docs", express.static(swaggerUiDist));
 
-// Serve Swagger HTML
 app.get("/api-docs", (req, res) => {
   res.send(swaggerUI.generateHTML(swaggerSpec));
 });
 
-// Error handling
 app.use(errorHandler);
 
 module.exports = app;
