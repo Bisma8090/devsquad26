@@ -9,9 +9,10 @@ const swaggerDefinition = {
   components: { securitySchemes: { bearerAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" } } },
 };
 
+const path = require("path");
 const options = {
   swaggerDefinition,
-  apis: ["./routes/*.js"] // serverless compatible
+  apis: [path.join(__dirname, "routes", "*.js")]
 };
 
 const swaggerSpec = swaggerJSDoc(options);
