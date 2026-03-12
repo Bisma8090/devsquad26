@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors"); // ✅ Add CORS
 const swaggerUI = require("swagger-ui-express");
 const swaggerSpec = require("./swagger");
-const swaggerUiDist = require("swagger-ui-dist").getAbsoluteFSPath();
 
 const authRoutes = require("./routes/authRoutes");
 const taskRoutes = require("./routes/taskRoutes");
