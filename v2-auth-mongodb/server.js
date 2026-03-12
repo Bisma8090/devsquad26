@@ -1,8 +1,7 @@
 const express = require("express");
-const cors = require("cors"); // ✅ Add CORS
+const cors = require("cors");
 const swaggerUI = require("swagger-ui-express");
 const swaggerSpec = require("./swagger");
-const swaggerUiDist = require("swagger-ui-dist").getAbsoluteFSPath();
 
 const authRoutes = require("./routes/authRoutes");
 const taskRoutes = require("./routes/taskRoutes");
@@ -12,12 +11,11 @@ require("dotenv").config();
 
 const app = express();
 
-// Connect to MongoDB
+// 🔹 Connect to MongoDB
 connectDB();
 
+// 🔹 Middleware
 app.use(express.json());
-
-// 🔹 CORS middleware
 app.use(
   cors({
     origin: [
@@ -29,33 +27,27 @@ app.use(
   })
 );
 
-// 🔹 Handle preflight OPTIONS requests
-app.options("*", cors({
-  origin: [
-    "http://localhost:5173",
-    "https://taskmnager-frontend.netlify.app"
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  credentials: true
-}));
-
-// Routes
+// 🔹 Routes
 app.use("/api", authRoutes);
 app.use("/api", taskRoutes);
-// Swagger docs
-app.use("/api-docs", express.static(swaggerUiDist));
-app.get("/api-docs", (req, res) => {
-  res.send(swaggerUI.generateHTML(swaggerSpec, { explorer: true }));
-});
 
-// Root endpoint
+// 🔹 Swagger docs
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
+
+// 🔹 Root endpoint
 app.get("/", (req, res) => {
   res.send(
     "The API is running successfully. Explore APIs at /api and Swagger documentation at /api-docs."
   );
 });
 
-// Error handler
+// 🔹 Error handler
 app.use(errorHandler);
+
+// 🔹 Start server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
 module.exports = app;
