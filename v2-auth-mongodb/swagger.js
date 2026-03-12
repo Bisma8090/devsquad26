@@ -1,17 +1,32 @@
 const swaggerJSDoc = require("swagger-jsdoc");
+const path = require("path");
 
 const swaggerDefinition = {
   openapi: "3.0.0",
-  info: { title: "Task Manager API", version: "1.0.0", description: "Task Manager API with JWT" },
+  info: {
+    title: "Task Manager API",
+    version: "1.0.0",
+    description: "Task Manager API with JWT"
+  },
   servers: [
-    { url: "https://devsquad26-15g2.vercel.app/api", description: "Vercel server" }
+    {
+      url: "https://devsquad26-93mh.vercel.app/api"
+    }
   ],
-  components: { securitySchemes: { bearerAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" } } },
+  components: {
+    securitySchemes: {
+      bearerAuth: {
+        type: "http",
+        scheme: "bearer",
+        bearerFormat: "JWT"
+      }
+    }
+  }
 };
 
 const options = {
-  swaggerDefinition,
-  apis: ["./routes/*.js"] // serverless compatible
+  definition: swaggerDefinition,
+  apis: [path.join(__dirname, "./routes/*.js")]
 };
 
 const swaggerSpec = swaggerJSDoc(options);

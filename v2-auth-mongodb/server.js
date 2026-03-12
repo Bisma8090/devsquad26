@@ -42,12 +42,7 @@ app.options("*", cors({
 // Routes
 app.use("/api", authRoutes);
 app.use("/api", taskRoutes);
-// Swagger docs
-app.use("/api-docs", express.static(swaggerUiDist));
-app.get("/api-docs", (req, res) => {
-  res.send(swaggerUI.generateHTML(swaggerSpec, { explorer: true }));
-});
-
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 // Root endpoint
 app.get("/", (req, res) => {
   res.send(
